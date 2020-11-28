@@ -22,7 +22,7 @@ int main()
     check_neighbors(f);
     check_lineary(j, H, J);
 
-    /*gcry_mpi_release(f.x);
+    gcry_mpi_release(f.x);
     gcry_mpi_release(f.y);
     gcry_mpi_release(f.z);
     gcry_mpi_release(j.x);
@@ -30,7 +30,7 @@ int main()
     gcry_mpi_release(j.z);
     gcry_mpi_release(F);
     gcry_mpi_release(J);
-    gcry_mpi_release(H);*/
+    gcry_mpi_release(H);
 
 
     release_memory();
