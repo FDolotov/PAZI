@@ -78,7 +78,7 @@ struct point summ(struct point f, struct point s)
     newpoint = convert(newpoint);
     return newpoint;
 
-    /*gcry_mpi_release(x1);
+    gcry_mpi_release(x1);
     gcry_mpi_release(y1);
     gcry_mpi_release(z1);
     gcry_mpi_release(x2);
@@ -92,7 +92,7 @@ struct point summ(struct point f, struct point s)
     gcry_mpi_release(D);
     gcry_mpi_release(E);
     gcry_mpi_release(F);
-    gcry_mpi_release(G);*/
+    gcry_mpi_release(G);
 }
 
 struct point doubling(struct point f)
@@ -129,9 +129,9 @@ struct point doubling(struct point f)
     gcry_mpi_mulm(buff, two, H, p); //2*H
     gcry_mpi_subm(J, F, buff, p); //F - 2*H
 
-    /*gcry_mpi_release(x1);
+    gcry_mpi_release(x1);
     gcry_mpi_release(y1);
-    gcry_mpi_release(z1);*/
+    gcry_mpi_release(z1);
 
     struct point newpoint;
     newpoint.x = gcry_mpi_new(0);
@@ -150,14 +150,14 @@ struct point doubling(struct point f)
     newpoint = convert(newpoint);
     return newpoint;
     
-    /*gcry_mpi_release(buff);
+    gcry_mpi_release(buff);
     gcry_mpi_release(B);
     gcry_mpi_release(C);
     gcry_mpi_release(D);
     gcry_mpi_release(E);
     gcry_mpi_release(F);
     gcry_mpi_release(H);
-    gcry_mpi_release(J);*/
+    gcry_mpi_release(J);
 }
 
 struct point binary(struct point f, gcry_mpi_t seed)
@@ -228,11 +228,11 @@ void check_if_on_curve(struct point f)
         printf("\e[38;5;198mTest 1 failed\n\033[0m");
     }
 
-    /*gcry_mpi_release(newpoint.x);
+    gcry_mpi_release(newpoint.x);
     gcry_mpi_release(newpoint.y);
     gcry_mpi_release(buff);
     gcry_mpi_release(buff2);
-    gcry_mpi_release(buff3);*/
+    gcry_mpi_release(buff3);
 }
 
 void check_identity (struct point P) //[q]P == (0, 1, 1)
@@ -253,9 +253,9 @@ void check_identity (struct point P) //[q]P == (0, 1, 1)
     {
         printf("\e[38;5;198mTest 2 failed\n\033[0m");
     }
-    /*gcry_mpi_release(x);
+    gcry_mpi_release(x);
     gcry_mpi_release(y);
-    gcry_mpi_release(z);*/
+    gcry_mpi_release(z);
 }
 
 void check_neighbors(struct point P)
@@ -297,10 +297,10 @@ void check_neighbors(struct point P)
         printf("\e[38;5;198mTest 3.2 failed\n\033[0m");
     }
 
-    /*gcry_mpi_release(x);
+    gcry_mpi_release(x);
     gcry_mpi_release(y);
     gcry_mpi_release(z);
-    gcry_mpi_release(buff);*/     
+    gcry_mpi_release(buff);     
 }
 
 void check_lineary(struct point P, gcry_mpi_t k1, gcry_mpi_t k2)
@@ -321,7 +321,7 @@ void check_lineary(struct point P, gcry_mpi_t k1, gcry_mpi_t k2)
         printf("\e[38;5;198mTest 4 failed\n\033[0m");
     }
 
-    //gcry_mpi_release(buff);
+    gcry_mpi_release(buff);
 }
 
 
