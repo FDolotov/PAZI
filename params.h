@@ -2,6 +2,7 @@
 #define PARAMS_H
 
 #include <gcrypt.h>
+#include <sys/types.h>
 
 gcry_mpi_t p;
 gcry_mpi_t a;
