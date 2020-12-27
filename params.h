@@ -15,7 +15,7 @@ gcry_mpi_t zero;
 gcry_mpi_t one;
 gcry_mpi_t two;
 
-void set_params();
-void release_memory();
+extern void set_params();
+extern void release_memory();
 
 #endif
