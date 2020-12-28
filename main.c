@@ -3,6 +3,17 @@
 #include <sys/types.h>
 #include "foo.h"
 
+gcry_mpi_t p;
+gcry_mpi_t a;
+gcry_mpi_t d;
+gcry_mpi_t q;
+gcry_mpi_t u;
+gcry_mpi_t v;
+
+gcry_mpi_t zero;
+gcry_mpi_t one;
+gcry_mpi_t two;
+
 int main()
 {
     size_t scanned;
