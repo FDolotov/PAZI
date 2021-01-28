@@ -15,7 +15,8 @@ extern gcry_mpi_t zero;
 extern gcry_mpi_t one;
 extern gcry_mpi_t two;
 
-extern void set_params();
+extern void params_set1(); //256-bit
+extern void params_set2(); //512-bit
 extern void release_memory();
 
 #endif
